@@ -1,0 +1,13 @@
+<div>
+    <form #loginForm="ngForm" style="width: 500px; margin: 0 auto">
+        <label>User</label>
+        <input type="text" name="cajausuario" #cajausuario
+        class="form-control"/>
+        <label>Password</label>
+        <input type="text" name="cajapassword" #cajapassword
+        class="form-control"/>
+        <button (click)="loginAlumno()" class="btn btn-outline-info">
+            Log In
+        </button>
+    </form>
+</div>

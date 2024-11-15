@@ -1,0 +1,20 @@
+<div>
+    <h1>Crear Alumno Nuevo</h1>
+
+    <form #createfor="ngForm">
+        <label>Id Alumno</label>
+        <input  type="number" class="form-control" #cajaidAlumno name="cajaidAlumno"/>
+        <label>Nombre</label>
+        <input  type="text" class="form-control" #cajaNombre name="cajaNombre"/>
+        <label>Apellido</label>
+        <input  type="text" class="form-control" #cajaApellido name="cajaApellido"/>
+        <label>Imagen</label>
+        <input  type="text" class="form-control" #cajaImagen name="cajaImagen"/>
+        <label>Elige si estara activo(1) o inactivo(0):</label> 
+        <input type="number" #cajaActivo name="cajaActivo" class="form-control"/>
+        <label>Id Curso</label>
+        <input  type="text" class="form-control" #cajaidCurso name="cajaidCurso"/>
+
+        <button class="btn btn-success" (click)="insertAlumno()">Crear Alumno</button>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<div>
+    <h1>Update Alumno</h1>
+    <a [routerLink]="['/alumnoscurso']">Back to list</a>
+    <form #createForm="ngForm">
+        <input  type="hidden" class="form-control" #cajaidAlumno name="cajaidAlumno" value={{alumno.idAlumno}}/>
+        <label>Nombre</label>
+        <input  type="text" class="form-control" #cajaNombre name="cajaNombre" value={{alumno.nombre}}/>
+        <label>Apellido</label>
+        <input  type="text" class="form-control" #cajaApellido name="cajaApellido" value={{alumno.apellidos}}/>
+        <label>Imagen</label>
+        <input  type="text" class="form-control" #cajaImagen name="cajaImagen" value={{alumno.imagen}}/>
+        <label>Elige si estara activo(1) o inactivo(0):</label> 
+        <input type="number" #cajaActivo name="cajaActivo" class="form-control" value={{alumno.activo}}/>
+        <label>Id Curso</label>
+        <input  type="text" class="form-control" #cajaidCurso name="cajaidCurso" value={{alumno.idCurso}}/>
+
+        <button class="btn btn-success" (click)="updateAlumno()">Update Alumno</button>
+    </form>
+</div>

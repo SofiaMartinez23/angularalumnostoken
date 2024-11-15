@@ -1,0 +1,36 @@
+<div>
+    <h1>Alumnos Totales</h1>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Id Alumno</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Imagen</th>
+                <th>Activo</th>
+                <th>Id Curso</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (alumno of alumnos; track alumno) {
+                <tr>
+                    <td>{{alumno.idAlumno}}</td>
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.apellidos}}</td>
+                    <td><img :src={{alumno.imagen}}/></td>
+                    @if (alumno.activo != 0) {
+                        <td>Activo</td>
+                    }@else{
+                        <td>Inactivo</td>
+                    }
+                    <td>{{alumno.idCurso}}</td>
+                    <td>
+                        <a [routerLink]="['/update', alumno.idAlumno]" class="btn btn-info">Update</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
